@@ -26,8 +26,6 @@ void leds(int led12, int led11, int led10, int led9, int led8, int delayMs) {
 }
 
 void setup() {
-  
-  //pinMode(LED_BUILTIN, OUTPUT);
   pinMode(ledPin12, OUTPUT);
   pinMode(ledPin11, OUTPUT);
   pinMode(ledPin10, OUTPUT);
@@ -47,6 +45,5 @@ void loop() {
   leds(0, 0, 1, 1, 1, delayValue);
   leds(0, 1, 1, 1, 1, delayValue);
   leds(1, 1, 1, 1, 1, delayValue);
-  
   
 }
