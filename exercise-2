@@ -1,0 +1,52 @@
+int ledPin12 = 12;
+int ledPin11 = 11;
+int ledPin10 = 10;
+int ledPin9 = 9;
+int ledPin8 = 8;
+
+int delayValue = 300;
+
+void leds(int led12, int led11, int led10, int led9, int led8, int delayMs) {
+  if (led12 == 1) digitalWrite(ledPin12, HIGH);
+  else digitalWrite(ledPin12, LOW);
+
+  if (led11 == 1) digitalWrite(ledPin11, HIGH);
+  else digitalWrite(ledPin11, LOW);
+
+  if (led10 == 1) digitalWrite(ledPin10, HIGH);
+  else digitalWrite(ledPin10, LOW);
+
+  if (led9 == 1) digitalWrite(ledPin9, HIGH);
+  else digitalWrite(ledPin9, LOW);
+
+  if (led8 == 1) digitalWrite(ledPin8, HIGH);
+  else digitalWrite(ledPin8, LOW);
+
+  delay(delayMs);
+}
+
+void setup() {
+  
+  //pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(ledPin12, OUTPUT);
+  pinMode(ledPin11, OUTPUT);
+  pinMode(ledPin10, OUTPUT);
+  pinMode(ledPin9, OUTPUT);
+  pinMode(ledPin8, OUTPUT);
+}
+
+void loop() {
+  leds(1, 0, 0, 0, 0, delayValue);
+  leds(1, 1, 0, 0, 0, delayValue);
+  leds(1, 1, 1, 0, 0, delayValue);
+  leds(1, 1, 1, 1, 0, delayValue);
+  leds(1, 1, 1, 1, 1, delayValue);
+  
+  leds(0, 0, 0, 0, 1, delayValue);
+  leds(0, 0, 0, 1, 1, delayValue);
+  leds(0, 0, 1, 1, 1, delayValue);
+  leds(0, 1, 1, 1, 1, delayValue);
+  leds(1, 1, 1, 1, 1, delayValue);
+  
+  
+}
